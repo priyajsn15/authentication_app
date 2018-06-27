@@ -1,0 +1,22 @@
+<%= form_for(@user, :url => "/users/password") do |f| %>
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <h4>Change your password</h4>
+        <div class="form-group">
+          <label>Old password</label>
+          <%= password_field_tag :current_password, @user.current_password, placeholder: "Current password",:class => "form-control"%>
+        </div>
+
+        <div class="form-group">
+          <label>New password</label>
+          <%= f.password_field :password , id:"txtPassword", autocomplete: "off", class: 'form-control', placeholder: 'New password (optional)', 'required' => '','minlength' => 6  %>
+        </div>
+
+        <div class="form-group">
+          <label>Confirm new password</label>
+          <%= f.password_field :password_confirmation, id:"textconforimpassword", autocomplete: "off", class: 'form-control', placeholder: 'Confirm new password', 'required' => '' , 'minlength' => 6 %>
+        </div>
+
+        <button type="submit" id="updatepassword" class="btn_1 green">Update Password</button>
+    </div>
+<% end %>

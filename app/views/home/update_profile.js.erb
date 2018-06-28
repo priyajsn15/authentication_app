@@ -1,0 +1,5 @@
+<%if @user && @user.errors.blank?%>
+ <% flash[:notice] = 'Profile Updated Successfully' %>
+ $(".navbar").after("<%= j render(:partial => 'layouts/messages') %>");
+<% end %>
+$("#home_page").html("<%= j render(:partial => 'home/form') %>");

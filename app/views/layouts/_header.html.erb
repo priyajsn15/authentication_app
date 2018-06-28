@@ -7,6 +7,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="/home" id="home" remote="true">Home</a></li>
       <li><%= link_to "Edit Profile", "/home/edit_profile", remote: true, id: 'edit_profile' %></li>
+ 	  <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
     </ul>
   </div>
 </nav>
